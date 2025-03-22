@@ -23,7 +23,7 @@ const DesktopNav = async () => {
           <Button variant="ghost" className="flex items-center gap-2" asChild>
             <Link href="/notifications">
               <BellIcon className="w-4 h-4" />
-              <span className="hidden lg:inline">Notifictions</span>
+              <span className="hidden lg:inline">Notifications</span>
             </Link>
           </Button>
           <Button variant="ghost" className="flex items-center gap-2" asChild>

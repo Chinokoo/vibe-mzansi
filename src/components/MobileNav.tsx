@@ -1,18 +1,8 @@
 "use client";
 import { SignInButton, SignOutButton, useAuth } from "@clerk/nextjs";
-import { useTheme } from "next-themes";
 import React, { useState } from "react";
 import { Button } from "./ui/button";
-import {
-  BellIcon,
-  HomeIcon,
-  LogOutIcon,
-  MenuIcon,
-  MonitorCog,
-  MoonIcon,
-  SunIcon,
-  User,
-} from "lucide-react";
+import { BellIcon, HomeIcon, LogOutIcon, MenuIcon, User } from "lucide-react";
 import {
   Sheet,
   SheetContent,
