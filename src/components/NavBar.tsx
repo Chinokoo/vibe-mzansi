@@ -3,8 +3,14 @@ import React from "react";
 import DesktopNav from "./DesktopNav";
 import Image from "next/image";
 import MobileNav from "./MobileNav";
+import { currentUser } from "@clerk/nextjs/server";
+import { syncUser } from "@/actions/user.actions";
 
-const NavBar = () => {
+const NavBar = async () => {
+  const user = await currentUser();
+
+  if (user) await syncUser();
+
   return (
     <nav className="sticky top-0 w-full border-b bg-background/95 backdrop-blu supports-[backdrop-filter]:bg-background/60 z-50">
       {/* container inside the nav*/}
