@@ -22,7 +22,7 @@ const CreatePost = () => {
     setIsPosting(true);
     try {
       const result = await createPost(content, imageUrl);
-      if (result.success) {
+      if (result?.success) {
         //reset the form
         setContent("");
         setImageUrl("");
@@ -48,7 +48,7 @@ const CreatePost = () => {
             </Avatar>
             <Textarea
               placeholder="Drop your vibe check here . . . 🔥"
-              className="min-h-[100px] resize-none border-none focus-visible:ring-0 p-0 text-base"
+              className="min-h-[100px] resize-none border-none focus-visible:ring-0 px-2 text-base"
               value={content}
               onChange={(e) => setContent(e.target.value)}
               disabled={isPosting}
