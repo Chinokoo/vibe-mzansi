@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { ScrollArea } from "@radix-ui/react-scroll-area";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const NotificationSkeleton = () => {
   // array items of 5 items
@@ -9,7 +9,7 @@ const NotificationSkeleton = () => {
 
   return (
     <div className="space-y-4 mt-5">
-      <Card className="border-none">
+      <Card className="">
         <CardHeader className="border-b">
           <div className="flex items-center justify-between">
             <CardTitle>Notifications</CardTitle>

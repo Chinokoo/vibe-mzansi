@@ -21,6 +21,20 @@ export async function getNotifications() {
             image: true,
           },
         },
+        post: {
+          select: {
+            id: true,
+            content: true,
+            image: true,
+          },
+        },
+        comment: {
+          select: {
+            id: true,
+            content: true,
+            createdAt: true,
+          },
+        },
       },
       orderBy: {
         createdAt: "desc",
