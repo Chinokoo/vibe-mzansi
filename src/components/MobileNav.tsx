@@ -13,7 +13,12 @@ import {
 import Link from "next/link";
 import { ModeToggle } from "./theme_button";
 
-const MobileNav = () => {
+interface MobileNavProps {
+  username: string;
+  userId: string;
+}
+
+const MobileNav = ({ username, userId }: MobileNavProps) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const { isSignedIn } = useAuth();
 
@@ -58,7 +63,7 @@ const MobileNav = () => {
                   className="flex items-center gap-3 justify-start"
                   asChild
                 >
-                  <Link href="/profile">
+                  <Link href={`/profile/${username ?? userId}`}>
                     <User className="h-4 w-4" />
                     Profile
                   </Link>

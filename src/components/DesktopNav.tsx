@@ -29,7 +29,7 @@ const DesktopNav = async () => {
           <Button variant="ghost" className="flex items-center gap-2" asChild>
             <Link
               href={`/profile/${
-                user.id ?? user?.emailAddresses[0].emailAddress.split("@")[0]
+                user?.emailAddresses[0].emailAddress.split("@")[0] ?? user.id
               }`}
             >
               <UserIcon className="w-4 h-4" />

@@ -8,6 +8,12 @@ import { syncUser } from "@/actions/user.actions";
 
 const NavBar = async () => {
   const user = await currentUser();
+  if (!user) return;
+
+  const userId = user.id;
+  const username = user.emailAddresses[0].emailAddress.split("@")[0];
+  // user.emailAddresses[0].emailAddress.split("@")[0]
+  //console.log();
 
   if (user) await syncUser();
 
@@ -30,7 +36,7 @@ const NavBar = async () => {
           </div>
           {/* second container for navigation either desktop or mobile */}
           <DesktopNav />
-          <MobileNav />
+          <MobileNav username={username} userId={userId} />
         </div>
       </div>
     </nav>
